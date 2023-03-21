@@ -38,7 +38,7 @@ Enter your fully qualified autoconfiguration class name in <a href="https://gith
 <b>springboot-webapp</b> has a dependency on the custom-autoconfig module. Check your <a href="https://github.com/mane-ashok/custom-autoconfig-springboot-webapp/blob/main/springboot-webapp/src/main/resources/application.properties">custom autoconfig properties </a> in springboot-webapp's application.properties file. <br/><br/>
 
 <b> How to test? </b> <br/>
-When you build the <a href="https://github.com/mane-ashok/custom-autoconfig-springboot-webapp">parent project</a> it builds both the modules (custom-autoconfig & springboot-webapp). Go to springboot-webapp/target folder and execute the command - <b>java -jar springboot-webapp-0.0.1-SNAPSHOT.jar>/b>. <br/>
+When you build the <a href="https://github.com/mane-ashok/custom-autoconfig-springboot-webapp">parent project</a> it builds both the modules (custom-autoconfig & springboot-webapp). Go to springboot-webapp/target folder and execute the command - <b>java -jar springboot-webapp-0.0.1-SNAPSHOT.jar></b>. <br/>
 On the application startup, spring boot's autoconfiguration framework will detect your custom autoconfig, check the condition logic and create, configure and register your datasource bean in the application context. You will see the logger in console logs that is added in <a href="https://github.com/mane-ashok/custom-autoconfig-springboot-webapp/blob/main/springboot-webapp/src/main/java/org/ashok/springboot/SpringBootWebapp.java"> This class </a> as below:<br/><br/>
 <b>******This Spring Boot app is using datasource class = org.h2.jdbcx.JdbcDataSource</b> <br/><br/>
 
