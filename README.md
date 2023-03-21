@@ -1,5 +1,10 @@
 # custom-autoconfig-springboot-webapp
 
+<h3> First of all watch below short video on the Spring boot internals </h3> <br/>
+
+[![spring-boot-internals](https://user-images.githubusercontent.com/93635967/226583230-4715698d-2179-4be4-a118-06a2b5d080ce.jpg)](https://youtu.be/-qO1Mm8DNOc)
+
+<br/>
 <h3> This is a multi module maven project which has 2 modules ( custom-autoconfig & springboot-webapp) in it. It helps to define dependencies and build the modules. <h3/>
 <h3> <b> Intent -</b> To demostrate spring boot custom autoconfiguration </h3>
 <h4> <b> custom-autoconfig module -</b> demonstrates custom autoconfiguration for datasource bean </h4>
