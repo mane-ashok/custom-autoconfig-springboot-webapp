@@ -2,15 +2,16 @@
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>  
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-parent</artifactId>
+	<version>3.0.4</version>
+	<relativePath/>
+  </parent>  
   
   <groupId>org.ashok</groupId>
   <artifactId>custom-autoconfig-springboot-webapp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <packaging>pom</packaging>
   <name>custom-autoconfig-springboot-webapp</name>
   <description>Spring Boot webapp with custom auto configuration</description>
