@@ -23,10 +23,7 @@ public class InvoiceService {
     
 	private InvoiceRepository invoiceRepository;
 	private InvoiceGenerator invoiceGenerator;
-	
-	@Value("${cdn.url}")
-    private String cdnUrl;
-
+		
     
 	@Autowired
 	public InvoiceService(InvoiceRepository invoiceRepository, InvoiceGenerator invoiceGenerator) {
