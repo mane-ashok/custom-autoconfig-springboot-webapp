@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>  
+  
+  <groupId>org.ashok</groupId>
+  <artifactId>custom-autoconfig-springboot-webapp</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>custom-autoconfig-springboot-webapp</name>
+  <description>Spring Boot webapp with custom auto configuration</description>
+  
+  <properties>
+		<java.version>17</java.version>
+  </properties>
+  
+  <modules>
+  	<module>custom-autoconfig</module>
+  	<module>springboot-webapp</module>
+  </modules>
+  
+  <!-- Just dependency definations which will be used in child modules without version so that versions are managed at a parent project level -->
+  <dependencyManagement>
+	
+	<!-- uncurated dependencies -->
+	
+	<dependencies>
+		
+		<!-- xtml to pdf converter -->
+		<dependency>
+		    <groupId>org.xhtmlrenderer</groupId>
+		    <artifactId>flying-saucer-pdf</artifactId>
+		    <version>9.1.22</version>
+		</dependency>
+		
+		<!-- html to xhtml converter-->	
+		<dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+		
+	</dependencies>
+	  
+  </dependencyManagement>
+  
+</project>

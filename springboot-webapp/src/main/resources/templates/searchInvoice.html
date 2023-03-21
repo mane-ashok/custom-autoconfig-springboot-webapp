@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/common.html :: headTagFragment"/>
+<body>
+	<div th:replace="fragments/common.html :: headerFragment">
+	</div>
+
+	<div class="container">
+	    <div class="row col-md-8 offset-md-2">
+	        <div class="card">
+	            <div th:if="${param.notfound}">
+	                <div class="alert alert-info">No invoice(s) found!</div>
+	            </div>
+	            <div class="card-header">
+	                <h2 class="text-center">Invoices</h2>
+	            </div>
+	            <div class="card-body">
+	                <form method="post" role="form" th:action="@{/searchInvoice}" th:object="${searchInvoice}">
+	
+	                    <div class="form-group mb-3">
+	                        <label class="form-label">User Id</label>
+	                        <input class="form-control"
+	                               id="email"
+	                               name="email"
+	                               placeholder="Enter user's email address"
+	                               th:field="*{email}"
+	                               type="email"
+	                        />
+	                        <p th:errors="*{email}" class="text-danger"
+	                           th:if="${#fields.hasErrors('email')}">
+	                        </p>
+	                    </div>
+	                    <div class="form-group mb-3">
+	                        <label class="form-label">Invoice Month</label>
+	                        
+	                        <select class="form-control" th:field="*{month}">
+	    					<option value="all">all</option>
+	    					<option th:each="month : ${searchInvoice.monthOptions}" th:value="${month}" th:text="${month}"></option>
+	    					</select>
+						              
+	                     
+	                        <p th:errors="*{month}" class="text-danger"
+	                           th:if="${#fields.hasErrors('month')}">
+	                        </p>
+	                    </div>
+	
+	                    <div class="form-group mb-3">
+	                        <button class="btn btn-primary" type="submit">Search</button>
+	                        
+	                    </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</body>
+</html>
